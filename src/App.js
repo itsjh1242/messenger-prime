@@ -5,9 +5,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Frame from "./components/Frame";
 
+// Alert
+import Alert from "./components/Alert";
+
 function App() {
   return (
     <>
+      <Alert />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />

@@ -7,7 +7,9 @@ export function IsAuth() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isAuth) {
+    const isAuth = localStorage.getItem("isAuth");
+
+    if (isAuth === "false" || isAuth === null) {
       navigate("/");
     }
   }, [isAuth, navigate]);
