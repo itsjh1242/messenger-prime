@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import styles from "../styles/Frame.module.scss";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+
+// Modules
 import { alertActions } from "../modules/AlertSlice";
 
 // IsAuth
@@ -11,6 +13,7 @@ import { IoMdPersonAdd } from "react-icons/io";
 
 // Containers
 import Contact from "../components/Contact";
+import Chat from "../components/Chat";
 
 // Socket
 import ioMethods from "../modules/socket";
@@ -38,13 +41,20 @@ const Frame = () => {
     <>
       <div className={styles.frame}>
         <div className={styles.contact}>
-          <p className={styles.title}>Contact</p>
+          <p className={styles.title}>Messenger</p>
           <div className={styles.search}>
             <IoMdPersonAdd size={20} color="#787878" />
             <input ref={inputRef} placeholder="Add friends" onKeyDown={AddContact} />
           </div>
           {/* Contact List Container */}
           <Contact />
+        </div>
+        <div className={styles.frame_col}>
+          <div className={styles.setting}>
+            <div className={styles.avatar}></div>
+            <p className={styles.name}>{uid}</p>
+          </div>
+          <Chat />
         </div>
       </div>
     </>

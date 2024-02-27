@@ -18,7 +18,7 @@
 .contact_item {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
 
@@ -120,13 +120,18 @@
   & > button {
     border: 1px solid #787878;
     border-radius: 5px;
-    background-color: #00b4d8;
+    background-color: #fff;
 
     font-family: Roboto;
     font-size: 12px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
 
+    transition: 0.3s;
     cursor: pointer;
+  }
+  & > button:hover {
+    background-color: #787878;
+    color: #fff;
   }
 }

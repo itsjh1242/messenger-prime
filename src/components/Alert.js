@@ -13,6 +13,7 @@ const alertMsg = {
   request_already: ["요청 진행중", "이미 친구 요청을 보냈습니다."],
   already_friend: ["친구 상태", "이미 친구입니다."],
   request_success: ["요청 완료", "친구 요청을 보냈습니다."],
+  request_accepted: ["요청 수락", "친구 요청을 수락했습니다."],
 };
 
 const Alert = () => {

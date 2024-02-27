@@ -1,22 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
-  contact: {},
+  currentChat: "",
 };
 
 export const contactSlice = createSlice({
   name: "contact",
   initialState,
   reducers: {
-    inc: (state) => {
-      state.value += 1;
-    },
-    dec: (state) => {
-      state.value -= 1;
+    setCurrentChat: (state, action) => {
+      state.currentChat = action.payload;
     },
   },
 });
 
-export const { inc, dec } = contactSlice.actions;
+export const selectChatRoom = (state) => state.contact.currentChat;
+
+export const { setCurrentChat } = contactSlice.actions;
 export default contactSlice.reducer;

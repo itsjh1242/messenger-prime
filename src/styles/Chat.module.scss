@@ -1,0 +1,153 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 0 0 20px 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  height: 100px;
+  border: none;
+
+  & > .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #787878;
+  }
+  & > .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    & > .name {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    & > .status {
+      font-family: Roboto;
+      font-size: 12px;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+
+  width: 100%;
+  height: 500px;
+
+  overflow-y: scroll;
+  padding: 6px;
+
+  -ms-overflow-style: none; /*IE, Edge*/
+  scrollbar-width: none; /*Firefox*/
+  ::-webkit-scrollbar {
+    display: none; /*Chrome, Safari, Opera*/
+    width: 0px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 4px;
+
+  width: 100%;
+  height: fit-content;
+
+  & > .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #787878;
+  }
+}
+
+.item_sender {
+  justify-content: flex-end;
+}
+.item_receiver {
+  justify-content: flex-start;
+}
+
+.message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: fit-content;
+  max-width: 450px;
+  height: fit-content;
+  background-color: #fff;
+
+  padding: 10px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.message_sender {
+  background-color: #0077b6;
+  border-radius: 8px 8px 0 8px;
+  color: #fff;
+}
+.message_receiver {
+  background-color: #fff;
+  border-radius: 8px 8px 8px 0;
+}
+
+.chat_frmae {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100px;
+
+  .chat_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 95%;
+    height: 90px;
+    border-top: 1px solid #e1e1e1;
+
+    & > .input_box {
+      width: 100%;
+      height: fit-content;
+      min-height: 50px;
+      resize: none;
+
+      outline: none;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}

@@ -29,6 +29,30 @@ ioMethods.getContacts = async (uid) => {
   });
 };
 
+ioMethods.acceptRequest = async (uid, p_uid) => {
+  return new Promise((resolve, reject) => {
+    socket.emit("acceptRequest", { uid, p_uid }, (res) => {
+      resolve(res.res);
+    });
+  });
+};
+
+ioMethods.getChatRoom = async (uid, p_uid) => {
+  return new Promise((resolve, reject) => {
+    socket.emit("getChatRoom", { uid, p_uid }, (res) => {
+      resolve(res.res);
+    });
+  });
+};
+
+ioMethods.saveChat = async (uid, p_uid, msg) => {
+  return new Promise((resolve, reject) => {
+    socket.emit("saveChat", { uid, p_uid, msg }, (res) => {
+      resolve(res.res);
+    });
+  });
+};
+
 const useDisconnectHandler = () => {
   const dispatch = useDispatch();
 
